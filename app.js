@@ -85,6 +85,19 @@ const promptProject = portfolioData => {
       }
     },
     {
+      type: 'input',
+      name: 'description',
+      message: 'Provide a description of your project (required)',
+      validate: nameInput => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log ('Please enter your name!');
+          return false;
+        }
+      }
+    },
+    {
       type: 'checkbox',
       name: 'languages',
       message: 'What did you build this project with? (Check all that apply)',
